@@ -1,5 +1,7 @@
 <template>
-    <router-link class="styled-button" :to="link">{{ text }}<span v-if="subtext" class="subtext"> {{ subtext }}</span></router-link>
+    <a class="styled-button" :href="link" v-on:click="smoothScroll">
+      {{ text }}<span v-if="subtext" class="subtext"> {{ subtext }}</span>
+    </a>
 </template>
 
 <script>
@@ -18,6 +20,17 @@ export default {
       default: null,
       required: false,
       type: String
+    }
+  },
+  methods: {
+    smoothScroll: function(event) {
+      const url = event.currentTarget.getAttribute('href')
+      if (url.indexOf('#') > -1) {
+        event.preventDefault()
+        document.querySelector(event.currentTarget.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        })
+      }
     }
   }
 }

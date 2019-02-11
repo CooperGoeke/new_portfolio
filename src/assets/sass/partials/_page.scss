@@ -5,7 +5,24 @@
     height: 100vh;
     left: 0;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
+
+    &:nth-child(2) {
+        top: 100vh
+    }
+
+    &:nth-child(3) {
+        top: 200vh
+    }
+
+    &:nth-child(4) {
+        top: 300vh
+    }
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+    }
 }
