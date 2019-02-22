@@ -6,19 +6,30 @@
 </template>
 
 <script>
-  import Navigation from '@/components/Navigation.vue'
+import Navigation from '@/components/Navigation.vue'
 
-  export default {
-    name: 'app',
-    components: {
-      Navigation
-    }
+export default {
+  name: 'app',
+  components: {
+    Navigation
   }
+}
 </script>
 
 <style lang="scss">
   * {
     box-sizing: border-box;
+  }
+
+  ::placeholder {
+    color: $color-blue-light;
+    opacity: 1;
+  }
+  :-ms-input-placeholder {
+    color: $color-blue-light;
+  }
+  ::-ms-input-placeholder {
+    color: $color-blue-light;
   }
 
   // CSS RESET
@@ -68,4 +79,3 @@
     border-spacing: 0;
   }
 </style>
-
