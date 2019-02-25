@@ -20,14 +20,5 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/Resume.vue')
     }
-  ],
-  scrollBehavior (to, from, savedPosition) {
-    if (to.hash) {
-      return { selector: to.hash }
-    } else if (savedPosition) {
-      return savedPosition
-    } else {
-      return { x: 0, y: 0 }
-    }
-  }
+  ]
 })

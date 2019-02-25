@@ -1,4 +1,4 @@
-# portfolio
+# Cooper Goeke: Online Portfolio
 
 My newly updated Portfolio Feburary (2019).
 

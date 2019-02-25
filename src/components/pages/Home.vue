@@ -31,14 +31,14 @@ export default {
     document.querySelector('.home__text-wrap').classList.add('active')
     lines.animate({
       opacity: '1'
-    }, 500, mina.linear, function() {
+    }, 500, mina.linear, function () {
       for (let i = 0; i < stages.length; i++) {
         setTimeout(function () {
           stages[i].animate({
             transform: 't0, 0'
           }, 800, mina.bounce)
           stages[i].addClass('active')
-        }, 50*i);
+        }, 50 * i)
       }
     })
   }
@@ -46,7 +46,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  $cloud: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.8 32.3"><path d="M19.02 31h27.66c22.6 0 10.97-24.68-1.64-14.54 0-20.66-25.47-19.73-25.47-2.47C4.16 3.54-11.64 31 19.02 31z" fill-rule="evenodd" clip-rule="evenodd" fill="%23f8fafd" stroke="%238aa8c5" stroke-width=".25" stroke-miterlimit="10"/></svg>';
+
   .home {
+    background: url($cloud) 5% 40% no-repeat, url($cloud) 20% 10% no-repeat, url($cloud) 30% 30% no-repeat, url($cloud) 65% 38% no-repeat, url($cloud) 80% 15% no-repeat, url($cloud) 95% 25% no-repeat;
+    background-size: 70px;
     z-index: 1;
 
     &__text-wrap {

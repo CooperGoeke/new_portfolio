@@ -20,25 +20,25 @@ export default {
     HomePage, AboutPage, WorkPage, ContactPage
   },
   created () {
-    window.addEventListener('scroll', throttle( function() {
+    window.addEventListener('scroll', throttle(function () {
       const pages = document.getElementsByClassName('page')
-      let page_height = document.querySelector('.home').clientHeight
+      let pageHeight = document.querySelector('.home').clientHeight
       for (let i = 1; i < (pages.length - 1); i++) {
         if (window.pageYOffset >= pages[i].offsetTop) {
           pages[i].classList.add('fixed')
         }
-        if (window.pageYOffset <= (pages[i+1].offsetTop - page_height)) {
+        if (window.pageYOffset <= (pages[i + 1].offsetTop - pageHeight)) {
           pages[i].classList.remove('fixed')
         }
       }
-    }, 25))
+    }, 20))
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+        e.preventDefault()
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+          behavior: 'smooth'
         })
       })
     })
@@ -51,4 +51,3 @@ export default {
     padding: 100vh 0 0 0;
   }
 </style>
-
