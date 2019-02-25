@@ -126,7 +126,7 @@ export default {
         position: relative;
 
         span {
-          color: red;
+          color: $color-red;
         }
       }
 
@@ -179,6 +179,7 @@ export default {
     &__text-wrap {
       color: $color-blue-dark;
       padding: 50px 50px 50px 10px;
+      position: relative;
       width: 35%;
 
       h2 {
@@ -197,6 +198,10 @@ export default {
     }
 
     &__github-link {
+      bottom: 45px;
+      left: 0;
+      padding: 0 50px 0 10px;
+      position: absolute;
 
       svg {
         margin-right: 3px;
