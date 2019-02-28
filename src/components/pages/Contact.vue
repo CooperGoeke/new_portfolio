@@ -103,16 +103,22 @@ export default {
     z-index: 4;
 
     &__wrap {
-      background: $color-white;
-      box-shadow: -4px 4px 10px rgba($color-black, .05);
-      display: flex;
-      max-width: 850px;
       width: 100%;
+      @include bp($bp-small) {
+        background: $color-white;
+        box-shadow: -4px 4px 10px rgba($color-black, .05);
+        display: flex;
+        max-width: 850px;
+      }
     }
 
     &__form {
+      display: none;
       padding: 50px;
       width: 65%;
+      @include bp($bp-small) {
+        display: block;
+      }
 
       h2 {
         margin-bottom: 50px;
@@ -178,16 +184,28 @@ export default {
 
     &__text-wrap {
       color: $color-blue-dark;
-      padding: 50px 50px 50px 10px;
+      margin: 0 auto;
       position: relative;
-      width: 35%;
+      text-align: center;
+      width: 85%;
+      @include bp($bp-small) {
+        padding: 50px 50px 50px 10px;
+        text-align: left;
+        width: 35%;
+      }
 
       h2 {
-        margin-bottom: 50px;
+        margin-bottom: 10px;
+        @include bp($bp-small) {
+          margin-bottom: 50px;
+        }
       }
 
       h3 {
-        margin: 5px 0 25px;
+        margin: 5px 0 50px;
+        @include bp($bp-small) {
+          margin: 5px 0 25px;
+        }
       }
 
       span {
@@ -199,9 +217,13 @@ export default {
 
     &__github-link {
       bottom: 45px;
+      display: none;
       left: 0;
       padding: 0 50px 0 10px;
       position: absolute;
+      @include bp($bp-small) {
+        display: block;
+      }
 
       svg {
         margin-right: 3px;

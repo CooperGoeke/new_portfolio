@@ -1,0 +1,21 @@
+// _breakpoints.scss
+// Set breakpoint variables for site
+
+$bp-tiny: 350px;
+$bp-small: 480px;
+$bp-medium: 720px;
+$bp-large: 960px;
+
+
+// Breakpoint Mixin
+@mixin bp($min-width: 0, $max-width: false) {
+    @if ($max-width) {
+        @media only screen and (min-width: $min-width) and (max-width: $max-width - 1px) {
+            @content;
+        }
+    } @else {
+        @media only screen and (min-width: $min-width) {
+            @content;
+        }
+    }
+}

@@ -13,8 +13,8 @@
       <div class="work__sites-wrap">
         <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://old.coopergoeke.com/" text="Old Portfolio"/>
         <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://fiduciaryinsurancegroup.com/" text="Insurance Group"/>
-        <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://neep.coopergoeke.com/" text="Neep App"/>
         <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://www.cincyrowing.org/" text="UC Rowing"/>
+        <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://neep.coopergoeke.com/" text="Neep App"/>
       </div>
     </div>
   </section>
@@ -41,23 +41,65 @@ export default {
     z-index: 3;
 
     h3 {
-      margin: 50px 0 25px;
+      margin: 40px 0 25px;
+      @include bp($bp-small) {
+        margin: 50px 0 25px;
+      }
     }
 
     &__brands-wrap {
       align-items: center;
-      display: flex;
       justify-content: center;
-      margin: 0 0 50px;
+      @include bp($bp-small) {
+        display: flex;
+      }
 
       img {
-        margin: 0 50px;
-        width: 130px;
+        margin: 0 50px 30px;
+        width: 110px;
+        @include bp($bp-small) {
+          margin: 0 50px;
+          width: 130px;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+          display: none;
+          @include bp($bp-small) {
+            display: block;
+          }
+        }
       }
     }
 
-    &__site-button:not(:last-child) {
-      border-right: none;
+    &__site-button {
+      display: block;
+      margin: 30px auto;
+      width: 170px;
+      @include bp($bp-small) {
+        display: inline;
+        width: auto;
+      }
+
+      &:not(:last-child) {
+        @include bp($bp-small) {
+          border-right: none;
+        }
+      }
+
+      &:nth-child(3) {
+        margin: 30px auto 0;
+        @include bp($bp-small) {
+          margin: 30px auto;
+        }
+      }
+
+      &:last-child {
+        display: none;
+        @include bp($bp-small) {
+          display: inline;
+        }
+      }
     }
   }
 </style>

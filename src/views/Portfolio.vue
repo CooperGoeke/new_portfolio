@@ -1,13 +1,17 @@
 <template>
-  <div id="portfolio" class="page-wrap">
-    <HomePage/>
-    <AboutPage/>
-    <WorkPage/>
-    <ContactPage/>
+  <div>
+    <Navigation/>
+    <div id="portfolio" class="page-wrap">
+      <HomePage/>
+      <AboutPage/>
+      <WorkPage/>
+      <ContactPage/>
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from '@/components/Navigation.vue'
 import HomePage from '@/components/pages/Home.vue'
 import AboutPage from '@/components/pages/About.vue'
 import WorkPage from '@/components/pages/Work.vue'
@@ -17,7 +21,7 @@ import throttle from 'lodash.throttle'
 export default {
   name: 'portfolio',
   components: {
-    HomePage, AboutPage, WorkPage, ContactPage
+    Navigation, HomePage, AboutPage, WorkPage, ContactPage
   },
   created () {
     window.addEventListener('scroll', throttle(function () {
@@ -45,9 +49,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .page-wrap {
-    padding: 100vh 0 0 0;
-  }
-</style>

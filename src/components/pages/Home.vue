@@ -49,19 +49,30 @@ export default {
   $cloud: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.8 32.3"><path d="M19.02 31h27.66c22.6 0 10.97-24.68-1.64-14.54 0-20.66-25.47-19.73-25.47-2.47C4.16 3.54-11.64 31 19.02 31z" fill-rule="evenodd" clip-rule="evenodd" fill="%23f8fafd" stroke="%238aa8c5" stroke-width=".25" stroke-miterlimit="10"/></svg>';
 
   .home {
-    background: url($cloud) 5% 40% no-repeat, url($cloud) 20% 10% no-repeat, url($cloud) 30% 30% no-repeat, url($cloud) 65% 38% no-repeat, url($cloud) 80% 15% no-repeat, url($cloud) 95% 25% no-repeat;
-    background-size: 70px;
+    align-items: center;
+    background: url($cloud) 15% 53% no-repeat, url($cloud) 10% 15% no-repeat, url($cloud) 75% 55% no-repeat, url($cloud) 90% 20% no-repeat;
+    background-size: 65px;
+    display: flex;
+    justify-content: center;
     z-index: 1;
+    @include bp($bp-small) {
+      background: url($cloud) 5% 40% no-repeat, url($cloud) 20% 10% no-repeat, url($cloud) 30% 30% no-repeat, url($cloud) 65% 38% no-repeat, url($cloud) 80% 15% no-repeat, url($cloud) 95% 25% no-repeat;
+      background-size: 70px;
+    }
 
     &__text-wrap {
-      margin: 100px auto 0;
+      max-width: 600px;
       opacity: 0;
+      padding-bottom: 25vh;
       position: relative;
       text-align: center;
       top: -30px;
       transition: opacity .5s linear, top .5s ease-out;
-      width: 600px;
+      width: 100%;
       z-index: 2;
+      @include bp($bp-small) {
+        padding-bottom: 45vh;
+      }
 
       &.active {
         opacity: 1;
@@ -83,7 +94,7 @@ export default {
 
     &__bg-image {
       bottom: -20px;
-      height: 60%;
+      height: 40%;
       left: 50%;
       max-width: 1000px;
       pointer-events: none;
@@ -91,6 +102,9 @@ export default {
       transform: translateX(-50%);
       width: auto;
       z-index: 1;
+      @include bp($bp-small) {
+        height: 60%;
+      }
     }
   }
 </style>

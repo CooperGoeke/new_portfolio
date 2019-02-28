@@ -24,10 +24,13 @@
 
 <style lang="scss" scoped>
   .nav {
-    padding: 25px;
+    padding: 25px 5%;
     position: fixed;
     width: 100%;
     z-index: 999999;
+    @include bp($bp-medium) {
+      padding: 25px;
+    }
 
     &__left {
       float: left;
@@ -37,8 +40,19 @@
       float: right;
     }
 
-    &__link:first-child {
-      border-right: 0;
+    &__link {
+      &:first-child {
+        @include bp($bp-small) {
+          border-right: 0;
+        }
+      }
+
+      &:last-child {
+        display: none;
+        @include bp($bp-small) {
+          display: inline;
+        }
+      }
     }
   }
 </style>

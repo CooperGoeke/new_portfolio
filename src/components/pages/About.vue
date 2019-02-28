@@ -4,8 +4,10 @@
       <div class="about__text-wrap-inner">
         <div class="about__portrait-wrap">
           <img alt="" src="@/assets/images/portrait.svg">
-          <h2>Hello There</h2>
-          <h3>I’m glad you’re here!</h3>
+          <div>
+            <h2>Hello There</h2>
+            <h3>I’m glad you’re here!</h3>
+          </div>
         </div>
         <p>My name is Cooper and I’ve been doing web development and graphic design since 2010. I specialize as a front-end developer. I’ve got a long list of technologies and skills under my belt at this point, so I encourage you to check my resume for a full list.</p>
         <div class="about__button-wrap">
@@ -31,18 +33,30 @@ export default {
 <style lang="scss" scoped>
   .about {
     align-items: center;
+    background-blend-mode: multiply;
     background-color: $color-gray;
     background-image: url('../../assets/images/skill-tiles.svg');
-    background-position: 10% 65%;
+    background-position: right -120px bottom -80px;
     background-repeat: no-repeat;
-    background-size: 40%;
+    background-size: 400px;
     display: flex;
     justify-content: center;
     z-index: 2;
+    @include bp($bp-small) {
+      background-position: 10% 65%;
+      background-size: 40%;
+    }
 
     &__text-wrap {
-      padding-left: 55%;
-      width: 100%;
+      padding-bottom: 10vh;
+      text-align: center;
+      width: 85%;
+      @include bp($bp-small) {
+        padding-bottom: 0;
+        padding-left: 55%;
+        text-align: left;
+        width: 100%;
+      }
     }
 
     &__text-wrap-inner {
@@ -51,23 +65,26 @@ export default {
     }
 
     &__portrait-wrap {
+      display: flex;
       margin-bottom: 50px;
-
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
+      justify-content: center;
+      text-align: left;
+      @include bp($bp-small) {
+        justify-content: flex-start;
       }
 
       img {
-        float: left;
-        margin-right: 25px;
+        height: 80px;
+        margin: 0 15px 0 -5px;
         width: 70px;
+        @include bp($bp-small) {
+          margin: 0 25px 0 0;
+        }
       }
 
       h2 {
         margin-bottom: 10px;
-        padding-top: 20px;
+        padding-top: 22px;
       }
     }
 
