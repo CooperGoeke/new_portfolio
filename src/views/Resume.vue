@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page__inner">
     <div class="back-button">
       <StyledButton link="/" text="Portfolio"/>
       <StyledButton class="download_link" link="CooperGoekeResume.pdf" target="_blank" download text="Download PDF"/>
@@ -55,20 +55,20 @@
         <div class="resume__right">
           <h4>Red Ventures <span>Front End Developer</span></h4>
           <p>
-            Worked on several large brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Large emphasis on JavaScript, Vue.js, and modern web practices.<br>
-            <span>Spring 2017 - Current Role</span>
+            Worked on several large brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Large emphasis on JavaScript, Vue.js, and modern web practices. Mentored fellow developers.<br>
+            <span>May 2017 - Current Role</span>
           </p>
 
           <h4>Lampros Labs <span>Front End Developer + UI Designer</span></h4>
           <p>
             Worked with various startups and small businesses to develop websites, apps, and WordPress Themes. Designed logos, web page layouts, e-mails, and mobile UI. Personally met with clients through development stages.<br>
-            <span>Summer 2015 - Spring 2017</span>
+            <span>March 2015 - April 2017</span>
           </p>
 
-          <h4>Keithley Instruments <span>Firmware Engineer + Graphic Designer</span></h4>
+          <h4>Keithley Instruments <span>Firmware Engineer + Graphic Design Intern</span></h4>
           <p>
             Helped develop a new touch screen device using C++. Tasks included: creating an embedded web application, programming Excel macros, and designing part of the UI.<br>
-            <span>Winter 2014 - Winter 2015</span>
+            <span>January 2014 - December 2014</span>
           </p>
 
           <h4>Freelance / Contract Work <span>Web Developer + Graphic Designer</span></h4>
@@ -118,6 +118,7 @@ export default {
     float: right;
   }
 }
+
 .resume {
   background-color: $color-white;
   margin: 0 auto;
@@ -333,7 +334,5 @@ export default {
   &__education p {
     margin-bottom: 5px;
   }
-
 }
 </style>
-
