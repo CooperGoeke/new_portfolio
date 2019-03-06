@@ -26,8 +26,10 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
+  background-image: linear-gradient($color-gray, transparent);
+  //background: red;
   left: 0;
-  padding: 25px 5%;
+  padding: 25px 5% 50px;
   position: fixed;
   top: 0;
   width: 100%;

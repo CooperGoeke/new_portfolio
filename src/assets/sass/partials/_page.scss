@@ -3,29 +3,39 @@
 
 .page {
     box-shadow: 0 -1px 0 rgba($color-blue-dark, .2);
-    height: 100vh;
+    height: 600px;
     left: 0;
-    min-height: 500px;
     overflow: hidden;
-    position: absolute;
     top: 0;
     width: 100%;
+    @media (min-height: 550px) {
+        height: 100vh;
+        position: absolute;
+    }
 
     &:nth-child(2) {
-        top: 100vh
+        @media (min-height: 550px) {
+            top: 100vh;
+        }
     }
 
     &:nth-child(3) {
-        top: 200vh
+        @media (min-height: 550px) {
+            top: 200vh;
+        }
     }
 
     &:nth-child(4) {
-        top: 300vh
+        @media (min-height: 550px) {
+            top: 300vh;
+        }
     }
 
     &.fixed {
-        position: fixed;
-        top: 0;
+        @media (min-height: 550px) {
+            position: fixed;
+            top: 0;
+        }
     }
 
     &__inner {

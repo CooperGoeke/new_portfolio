@@ -23,7 +23,7 @@ export default {
     }
   },
   methods: {
-    smoothScroll: function(event) {
+    smoothScroll: function (event) {
       const url = event.currentTarget.getAttribute('href')
       if (url.indexOf('#') > -1) {
         event.preventDefault()

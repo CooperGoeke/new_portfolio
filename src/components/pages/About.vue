@@ -1,7 +1,7 @@
 <template>
   <section id="about" class="page about">
     <div class="about__inner page__inner">
-      <div class="about__text-wrap">
+      <div class="about__text-wrap js-reveal-on-scroll">
         <div class="about__text-wrap-inner">
           <div class="about__portrait-wrap">
             <img alt="" src="@/assets/images/portrait.svg">
@@ -56,14 +56,23 @@ export default {
   }
 
   &__text-wrap {
+    left: 30px;
+    opacity: 0;
     padding-bottom: 10vh;
+    position: relative;
     text-align: center;
+    transition: left .5s ease-out, opacity .25s linear;
     width: 85%;
     @media (min-aspect-ratio: 3/2) {
       padding-bottom: 0;
       padding-left: 50%;
       text-align: left;
       width: 100%;
+    }
+
+    &.active {
+      left: 0;
+      opacity: 1;
     }
   }
 

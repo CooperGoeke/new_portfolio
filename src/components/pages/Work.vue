@@ -1,21 +1,25 @@
 <template>
   <section id="work" class="page work">
     <div class="work__inner page__inner">
-      <div class="work__wrap">
-        <h2>My Work</h2>
-        <h3>Some brands I've worked on:</h3>
-        <div class="work__brands-wrap">
-          <img alt="American Express" src="@/assets/images/brand-amex.png"/>
-          <img alt="The Simple Dollar" src="@/assets/images/brand-tsd.png"/>
-          <img alt="Bankrate" src="@/assets/images/brand-bankrate.png"/>
-          <img alt="Frontier" src="@/assets/images/brand-frontier.png"/>
+      <div>
+        <h2 class="work__section js-reveal-on-scroll">My Work</h2>
+        <div class="work__section js-reveal-on-scroll">
+          <h3>Some brands I've worked on:</h3>
+          <div class="work__brands-wrap">
+            <img alt="American Express" src="@/assets/images/brand-amex.png"/>
+            <img alt="The Simple Dollar" src="@/assets/images/brand-tsd.png"/>
+            <img alt="Bankrate" src="@/assets/images/brand-bankrate.png"/>
+            <img alt="Frontier" src="@/assets/images/brand-frontier.png"/>
+          </div>
         </div>
-        <h3>Some other websites I've made:</h3>
-        <div class="work__sites-wrap">
-          <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://old.coopergoeke.com/" text="Old Portfolio"/>
-          <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://fiduciaryinsurancegroup.com/" text="Insurance Group"/>
-          <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://www.cincyrowing.org/" text="UC Rowing"/>
-          <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://neep.coopergoeke.com/" text="Neep App"/>
+        <div class="work__section js-reveal-on-scroll">
+          <h3>Some other websites I've made:</h3>
+          <div class="work__sites-wrap">
+            <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://old.coopergoeke.com/" text="Old Portfolio"/>
+            <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://fiduciaryinsurancegroup.com/" text="Insurance Group"/>
+            <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://www.cincyrowing.org/" text="UC Rowing"/>
+            <StyledButton class="work__site-button" rel="nofollow" target="_blank" link="http://neep.coopergoeke.com/" text="Neep App"/>
+          </div>
         </div>
       </div>
     </div>
@@ -43,6 +47,18 @@ export default {
     display: flex;
     justify-content: center;
     text-align: center;
+  }
+
+  &__section {
+    left: -30px;
+    opacity: 0;
+    position: relative;
+    transition: left .5s ease-out, opacity .25s linear;
+
+    &.active {
+      left: 0;
+      opacity: 1;
+    }
   }
 
   h3 {

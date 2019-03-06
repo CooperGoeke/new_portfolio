@@ -1,7 +1,7 @@
 <template>
   <section id="contact" class="page contact">
     <div class="contact__inner page__inner">
-      <div class="contact__wrap">
+      <div class="contact__wrap js-reveal-on-scroll">
         <div class="contact__wrap-inner">
           <form action="" class="contact__form" @submit.prevent="checkForm" method="post" novalidate="true">
             <h2>Send Me a Message</h2>
@@ -42,6 +42,7 @@
 <script>
 import Vue from 'vue'
 import Vuelidate from 'vuelidate'
+// eslint-disable-next-line
 import { required, maxLength, email } from 'vuelidate/lib/validators'
 Vue.use(Vuelidate)
 
@@ -114,11 +115,21 @@ export default {
     border: 1px solid $color-gray;
     box-shadow: 0 0 10px rgba($color-blue-light, .35);
     max-width: 860px;
+    opacity: 0;
     padding: 6px;
+    position: relative;
+    transform: scale(1.15);
+    transition: transform .5s ease-out, opacity .5s linear;
     width: 90%;
     @include bp($bp-medium) {
       background-image: repeating-linear-gradient(-45deg, $color-blue-light 0%, $color-blue-light 2%, $color-white 2%, $color-white 4%, $color-red 4%, $color-red 6%, $color-white 6%, $color-white 8%);
       padding: 8px;
+      transform: scale(1);
+    }
+
+    &.active {
+      opacity: 1;
+      transform: scale(1);
     }
   }
 

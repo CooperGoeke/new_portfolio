@@ -1,12 +1,12 @@
 <template>
-  <section id="home" class="page home fixed">
+  <section id="home" class="page home" :class="fixedClass">
     <div class="home__inner page__inner">
-      <div class="home__text-wrap">
+      <div class="home__text-wrap js-reveal-on-scroll">
         <h2>Web Developer<br/><span>+</span> Designer</h2>
         <h3>Helping to Create a Better Web</h3>
         <StyledButton class="home__button" link="#about" text="Learn More"/>
       </div>
-      <AnimatedCity class="home__bg-image"/>
+      <AnimatedCity class="home__bg-image js-reveal-on-scroll"/>
     </div>
   </section>
 </template>
@@ -20,29 +20,14 @@ export default {
   components: {
     StyledButton, AnimatedCity
   },
-  mounted: function () {
-    let city = new Snap('#city')
-    let lines = city.select('#bottom_lines')
-    let stages = [
-      city.select('#stage1'), city.select('#stage2'), city.select('#stage3'), city.select('#stage4'),
-      city.select('#stage5'), city.select('#stage6'), city.select('#stage7'), city.select('#stage8')
-    ]
-    for (let i = 0; i < stages.length; i++) {
-      stages[i].transform('t0, -30')
-    }
-    document.querySelector('.home__text-wrap').classList.add('active')
-    lines.animate({
-      opacity: '1'
-    }, 500, mina.linear, function () {
-      for (let i = 0; i < stages.length; i++) {
-        setTimeout(function () {
-          stages[i].animate({
-            transform: 't0, 0'
-          }, 800, mina.bounce)
-          stages[i].addClass('active')
-        }, 50 * i)
+  computed: {
+    fixedClass: function () {
+      if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
+        return ''
+      } else {
+        return ' fixed'
       }
-    })
+    }
   }
 }
 </script>
@@ -99,17 +84,24 @@ export default {
     }
 
     &__bg-image {
-      bottom: -20px;
+      bottom: -40px;
       height: 40%;
       left: 50%;
       max-height: 600px;
+      opacity: 0;
       pointer-events: none;
       position: absolute;
       transform: translateX(-50%);
+      transition: opacity .5s linear, bottom .5s ease-out;
       width: auto;
       z-index: 1;
       @include bp($bp-small) {
         height: 60%;
+      }
+
+      &.active {
+        bottom: -20px;
+        opacity: 1;
       }
     }
   }
