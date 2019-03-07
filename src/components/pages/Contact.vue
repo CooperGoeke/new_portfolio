@@ -3,26 +3,34 @@
     <div class="contact__inner page__inner">
       <div class="contact__wrap js-reveal-on-scroll">
         <div class="contact__wrap-inner">
-          <form action="" class="contact__form" @submit.prevent="checkForm" method="post" novalidate="true">
-            <h2>Send Me a Message</h2>
-            <label>
-              Name
-              <span class="contact__error" v-if="!$v.name.required && $v.name.$error">- is required</span>
-              <input name="name" type="text" @change="setName($event.target.value)">
-            </label>
-            <label>
-              Email
-              <span class="contact__error" v-if="!$v.email.required && $v.email.$error">- is required</span>
-              <span class="contact__error" v-if="!$v.email.email && $v.email.$error">- must be a valid email</span>
-              <input name="email" type="email" @change="setEmail($event.target.value)">
-            </label>
-            <label>
-              Message
-              <span class="contact__error" v-if="!$v.message.required && $v.message.$error">- is required</span>
-              <textarea name="message" type="text" @change="setMessage($event.target.value)"></textarea>
-            </label>
-            <input type="submit" value="Send">
-          </form>
+          <div class="contact__form-wrap">
+            <form class="contact__form" @submit.prevent="checkForm">
+              <h2>Send Me a Message</h2>
+              <label>
+                Name
+                <span class="contact__error" v-if="!$v.name.required && $v.name.$error">- is required</span>
+                <input name="name" type="text" @change="setName($event.target.value)">
+              </label>
+              <label>
+                Email
+                <span class="contact__error" v-if="!$v.email.required && $v.email.$error">- is required</span>
+                <span class="contact__error" v-if="!$v.email.email && $v.email.$error">- must be a valid email</span>
+                <input name="email" type="email" @change="setEmail($event.target.value)">
+              </label>
+              <label>
+                Message
+                <span class="contact__error" v-if="!$v.message.required && $v.message.$error">- is required</span>
+                <textarea name="message" type="text" @change="setMessage($event.target.value)"></textarea>
+              </label>
+              <input type="submit" value="Send">
+            </form>
+            <div class="contact__submitted">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><path d="M149.72 2.18C68.02 2.18 1.8 68.41 1.8 150.1s66.22 147.92 147.92 147.92S297.64 231.8 297.64 150.1 231.41 2.18 149.72 2.18zm0 273.82c-69.59 0-126-56.41-126-126s56.41-126 126-126 126 56.41 126 126-56.42 126-126 126z" fill="#9ccb41"/><path fill="#9ccb41" d="M220.42 95.07l-92.46 92.46-48.95-48.94-20.37 20.36 48.91 48.99-.02.01 20.37 20.37 112.89-112.88z"/></svg>
+                <span>Message Sent!</span>
+              </div>
+            </div>
+          </div>
           <div class="contact__text-wrap">
             <h2>Contact Info</h2>
             <h3>Feel free to reach out to me!</h3>
@@ -73,14 +81,16 @@ export default {
   methods: {
     checkForm () {
       this.$v.$touch()
-      if (this.$v.$invalid) {
-        this.submitStatus = 'ERROR'
-      } else {
-        // do your submit logic here
-        this.submitStatus = 'PENDING'
-        setTimeout(() => {
-          this.submitStatus = 'OK'
-        }, 500)
+      if (!this.$v.$invalid) {
+        // Submit form
+        let form = document.getElementsByClassName('contact__form')[0]
+        let loading = document.getElementsByClassName('contact__submitted')[0]
+        loading.setAttribute('height', form.clientHeight)
+        form.classList.add('active')
+        loading.style.display = 'flex'
+        setTimeout(function () {
+          loading.classList.add('active')
+        }, 250)
       }
     },
     setName (value) {
@@ -142,12 +152,22 @@ export default {
     }
   }
 
-  &__form {
+  &__form-wrap {
     display: none;
-    padding: 50px;
+    position: relative;
     width: 65%;
     @include bp($bp-small) {
       display: block;
+    }
+  }
+
+  &__form {
+    opacity: 1;
+    padding: 50px;
+    transition: opacity .25s linear;
+
+    &.active {
+      opacity: 0;
     }
 
     h2 {
@@ -209,6 +229,51 @@ export default {
       &:hover {
         background-color: $color-gray;
       }
+
+      &:focus {
+        background-color: darken($color-gray, 2%);
+      }
+
+      &:active {
+        background-color: darken($color-gray, 2%);
+      }
+    }
+  }
+
+  &__submitted {
+    align-items: center;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: opacity .25s linear .25s;
+    width: 100%;
+
+    &.active {
+      opacity: 1;
+
+      svg {
+        transform: scale(1);
+      }
+    }
+
+    svg {
+      display: inline-block;
+      margin-bottom: 10px;
+      transform: scale(0);
+      transition: transform .5s cubic-bezier(.27,1.69,.33,1.12) .25s;
+      width: 50px;
+    }
+
+    span {
+      color: $color-blue-dark;
+      display: block;
+      font-size: 14px;
+      width: 100%;
     }
   }
 

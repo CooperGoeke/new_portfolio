@@ -52,6 +52,14 @@ export default {
       background-color: $color-gray;
     }
 
+    &:focus {
+      background-color: darken($color-gray, 2%);
+    }
+
+    &:active {
+      background-color: darken($color-gray, 2%);
+    }
+
     .subtext {
       color: $color-blue-middle;
     }
