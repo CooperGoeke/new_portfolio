@@ -55,19 +55,19 @@
         <div class="resume__right">
           <h4>Red Ventures <span>Front End Developer</span></h4>
           <p>
-            Worked on several large brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Large emphasis on JavaScript, Vue.js, and modern web practices. Mentored fellow developers.<br>
+            Contributed to several large-brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Large emphasis on JavaScript, Vue.js, and modern web practices. Mentored fellow developers.<br>
             <span>May 2017 - Current Role</span>
           </p>
 
           <h4>Lampros Labs <span>Front End Developer + UI Designer</span></h4>
           <p>
-            Worked with various startups and small businesses to develop websites, apps, and WordPress Themes. Designed logos, web page layouts, e-mails, and mobile UI. Personally met with clients through development stages.<br>
+            Collaborated with various startups and businesses to develop websites, apps, and WordPress Themes. Designed logos, web page layouts, e-mails, and mobile UI. Personally met with clients through development stages.<br>
             <span>March 2015 - April 2017</span>
           </p>
 
           <h4>Keithley Instruments <span>Firmware Engineer + Graphic Design Intern</span></h4>
           <p>
-            Helped develop a new touch screen device using C++. Tasks included: creating an embedded web application, programming Excel macros, and designing part of the UI.<br>
+            Helped program a new touch screen device using C++. Tasks included: creating an embedded web application, programming Excel macros, and designing part of the UI.<br>
             <span>January 2014 - December 2014</span>
           </p>
 
@@ -85,7 +85,7 @@
         </div>
         <div class="resume__right">
           <h4>University of Cincinnati</h4>
-          <p>Major: Computer Science</p>
+          <p>BS: Computer Science</p>
         </div>
       </div>
     </section>
@@ -170,7 +170,7 @@ export default {
     }
 
     h3 {
-      color: $color-blue-dark !important;
+      color: $color-blue-middle !important;
       font-size: 18px !important;
     }
   }

@@ -10,7 +10,7 @@
               <h3>I’m glad you’re here!</h3>
             </div>
           </div>
-          <p>My name is Cooper and I’ve been doing web development and graphic design since 2010. I specialize as a front-end developer. I’ve got a long list of technologies and skills under my belt at this point, so I encourage you to check my resume for a full list.</p>
+          <p>My name is Cooper, and I’ve been doing web development and graphic design since 2010. I specialize as a front-end developer. I’ve got a long list of technologies and skills under my belt at this point, so I encourage you to check my resume for a full list.</p>
           <div class="about__button-wrap">
             <StyledButton class="about__button" link="#work" text="My Work"/>
             <StyledButton class="about__button" link="/resume" text="Resume"/>
