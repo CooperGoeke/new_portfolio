@@ -8,7 +8,7 @@
       <div class="resume__section resume__top">
         <div class="resume__right">
           <h1>Cooper <span>Goeke</span></h1>
-          <h2>Front End Developer, Graphic Designer</h2>
+          <h2>Front-End Developer, Graphic Designer</h2>
         </div>
         <div class="resume__left">
           <p>coopergoeke@gmail.com</p>
@@ -31,20 +31,17 @@
           </p>
 
           <h4>Web Development</h4>
-          <p>Vue.js, Node/NPM, Webpack, Gulp, Laravel 5, Twig, MySQL, Foundation Grid, WordPress themes and plugins, responsive layouts, SVG animation.</p>
+          <p>Vue.js, Node/NPM, Webpack, Gulp, Laravel 5, Twig, MySQL, Foundation Grid, WordPress themes and plugins, responsive layouts.</p>
 
           <h4>Graphic Design</h4>
-          <p>Web design, user interface design, print media, logos, icons, motion graphics, video editing, photography.</p>
+          <p>Web and UI design, video editing, logos, icons, SVG animation.</p>
 
           <h4>Applications</h4>
           <p>
             Adobe: Photoshop, Illustrator, InDesign, After Effects, Premiere.
             <br>
-            Other: VS Code, Git, Sketch 2, WordPress, Jira, Slack.
+            Other: Git, Sketch 2, WordPress, Jira, VS Code.
           </p>
-
-          <h4>Other</h4>
-          <p>Chrome extensions, website accessibility, browser compatibility, public speaking, project management, leadership experience, basic SEO.</p>
         </div>
       </div>
       <div class="resume__section resume__experience">
@@ -53,27 +50,21 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.28 5.14"><path d="M5.25 2.92H3.02V5.1h-.76V2.92H.03v-.7h2.23V.02h.76v2.2h2.23v.7z" fill="#8aa8c5"/></svg>
         </div>
         <div class="resume__right">
-          <h4>Red Ventures <span>Front End Developer</span></h4>
+          <h4>Red Ventures <span>Front-End Developer</span></h4>
           <p>
-            Contributed to several large-brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Large emphasis on JavaScript, Vue.js, and modern web practices. Mentored fellow developers.<br>
+            Built and maintained web experiences for several large-brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Leveraged modern web technologies including Vue.js and SCSS to create performant transactional funnels. Mentored two junior developers to help grow the front-end team and transition developer responsibilities when needed. Personally organized numerous company-wide events because... it’s fun!<br>
             <span>May 2017 - Current Role</span>
           </p>
 
-          <h4>Lampros Labs <span>Front End Developer + UI Designer</span></h4>
+          <h4>Lampros Labs <span>Front-End Developer + UI Designer</span></h4>
           <p>
-            Collaborated with various startups and businesses to develop websites, apps, and WordPress Themes. Designed logos, web page layouts, e-mails, and mobile UI. Personally met with clients through development stages.<br>
+            Worked alone or on a small team to develop web solutions for a wide range of small businesses and local start-ups. Projects were very diverse in scope which required flexibility and quick learning. Worked quickly to stay within tight budgets while still delivering competitive results to ensure the success of our clients. Led client facing meetings to ensure smooth input, alignment, and successful project outcomes.<br>
             <span>March 2015 - April 2017</span>
-          </p>
-
-          <h4>Keithley Instruments <span>Firmware Engineer + Graphic Design Intern</span></h4>
-          <p>
-            Helped program a new touch screen device using C++. Tasks included: creating an embedded web application, programming Excel macros, and designing part of the UI.<br>
-            <span>January 2014 - December 2014</span>
           </p>
 
           <h4>Freelance / Contract Work <span>Web Developer + Graphic Designer</span></h4>
           <p>
-            Created complete websites, WordPress themes, logos, videos, and print designs for over a dozen different businesses and local organizations.<br>
+            Worked independently to complete dozens of freelance/contract jobs which required knowledge of front-end technologies, back-end programming, graphic design, and database design — plus some client side relations. Side projects like these greatly improved my skills and experience over the years and gave me the freedom to try new technologies as I learned about them. This freelance work, paired with my degree in computer science, is the original foundation for my career.<br>
             <span>Spring 2013 - Fall 2017 (Part Time)</span>
           </p>
         </div>
@@ -85,7 +76,7 @@
         </div>
         <div class="resume__right">
           <h4>University of Cincinnati</h4>
-          <p>BS: Computer Science</p>
+          <p>BS: Computer Science <br>Honors, Swimming</p>
         </div>
       </div>
     </section>
