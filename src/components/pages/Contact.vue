@@ -52,6 +52,7 @@ import Vue from 'vue'
 import Vuelidate from 'vuelidate'
 // eslint-disable-next-line
 import { required, maxLength, email } from 'vuelidate/lib/validators'
+import axios from 'axios'
 Vue.use(Vuelidate)
 
 export default {
@@ -82,7 +83,22 @@ export default {
     checkForm () {
       this.$v.$touch()
       if (!this.$v.$invalid) {
+        let data = {
+          name: this.name,
+          email: this.email,
+          message: this.message
+        }
         // Submit form
+        axios.post(
+          'http://coopergoeke.com/contact_form_handler.php',
+          data
+        ).then(function (response) {
+          console.log(response)
+        }).catch(function (error) {
+          console.log(error)
+        })
+
+        // Go ahead and just display the success message either way
         let form = document.getElementsByClassName('contact__form')[0]
         let loading = document.getElementsByClassName('contact__submitted')[0]
         loading.setAttribute('height', form.clientHeight)
