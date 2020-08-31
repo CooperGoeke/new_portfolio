@@ -36,9 +36,22 @@
             <h3>Feel free to reach out to me!</h3>
             <span>coopergoeke@gmail.com</span>
             <span>330.247.8364</span>
-            <p class="contact__github-link">
+            <p class="contact__code-link">
+              <svg viewBox="0 0 33.7 33.3">
+                <path fill="#324c78" d="M.6 17.5v-1.8-.3c.1-.6.1-1.2.2-1.8C2.4 4.5 11.4-1.4 20.4.7c10.4 2.4 15.8 14.1 10.7 23.5-2.5 4.7-6.5 7.5-11.7 8.4-.6.1-1.2.1-1.7.2h-1.8c-.4 0-.7-.1-1.1-.1-3.2-.4-6.1-1.6-8.5-3.7-3.1-2.7-5-6.1-5.6-10.2 0-.4-.1-.8-.1-1.3zm26.3-.8v-2.9c0-.4-.2-.7-.5-1-3-2-5.9-4-8.9-5.9-.5-.3-.8-.3-1.2 0-3 2-5.9 4-8.9 5.9-.4.2-.5.5-.5 1v5.8c0 .4.2.7.5 1 3 2 5.9 3.9 8.9 5.9.5.3.8.3 1.2 0 3-2 5.9-4 8.9-5.9.4-.2.5-.6.5-1v-2.9z"/>
+                <path fill="#324c78" d="M12.2 15.6c-1-.7-2-1.3-3-2 2.3-1.5 4.5-3 6.7-4.5V12.8c0 .2-.1.3-.2.4-1.1.8-2.3 1.6-3.5 2.4z"/>
+                <path fill="#324c78" d="M21.5 15.6l-3.6-2.4c-.1 0-.1-.1-.1-.2V9.3v-.1c2.2 1.5 4.5 3 6.7 4.5-1 .6-2 1.2-3 1.9z"/>
+                <path fill="#324c78" d="M15.9 24.2c-2.2-1.5-4.5-3-6.7-4.5l1.8-1.2c.3-.2.7-.5 1-.7h.3c1.2.8 2.3 1.5 3.4 2.3.1 0 .1.2.1.2V24c.2.1.2.1.1.2z"/>
+                <path fill="#324c78" d="M24.5 19.7c-2.3 1.5-4.5 3-6.7 4.5v-.3-3.4c0-.2 0-.3.2-.4 1.1-.7 2.2-1.5 3.4-2.2.1-.1.2-.1.3 0 .8.5 1.8 1.1 2.8 1.8z"/>
+                <path fill="#324c78" d="M13.8 16.7c.7-.5 1.3-.9 2-1.3l.9-.6c.1 0 .2-.1.3 0 1 .6 2 1.3 2.9 2-.7.5-1.3.9-2 1.3l-.9.6c-.1 0-.2.1-.3 0-.9-.7-1.9-1.4-2.9-2z"/>
+                <path fill="#324c78" d="M10.7 16.7c-.7.5-1.4.9-2.1 1.4v-2.9l2.1 1.5z"/>
+                <path fill="#324c78" d="M25.1 18.1c-.7-.5-1.4-.9-2.1-1.4.7-.5 1.4-.9 2.1-1.4v2.8z"/>
+              </svg>
+              See my latest work on&nbsp;<a href="https://codepen.io/coopergoeke" target="_blank" rel="noopener noreferrer">CodePen</a>.
+            </p>
+            <p class="contact__code-link">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.74 33.29"><path d="M16.87.76C7.88.76.58 8.05.58 17.05c0 7.2 4.67 13.3 11.14 15.46.81.15 1.11-.35 1.11-.79 0-.39-.01-1.41-.02-2.77-4.53.98-5.49-2.18-5.49-2.18-.74-1.88-1.81-2.38-1.81-2.38-1.48-1.01.11-.99.11-.99 1.63.12 2.5 1.68 2.5 1.68 1.45 2.49 3.81 1.77 4.74 1.35.15-1.05.57-1.77 1.03-2.18-3.62-.41-7.42-1.81-7.42-8.05 0-1.78.63-3.23 1.68-4.37-.17-.41-.73-2.07.16-4.31 0 0 1.37-.44 4.48 1.67 1.3-.36 2.69-.54 4.08-.55 1.38.01 2.78.19 4.08.55 3.11-2.11 4.48-1.67 4.48-1.67.89 2.24.33 3.9.16 4.31 1.04 1.14 1.67 2.59 1.67 4.37 0 6.26-3.81 7.63-7.44 8.04.58.5 1.11 1.5 1.11 3.02 0 2.18-.02 3.93-.02 4.47 0 .44.29.94 1.12.78 6.47-2.16 11.13-8.26 11.13-15.45 0-9.01-7.3-16.3-16.29-16.3z" fill-rule="evenodd" clip-rule="evenodd" fill="#324c78"/></svg>
-              You can also check out the code for this portfolio on <a href="https://github.com/CooperGoeke/new_portfolio" target="_blank">github</a>.
+              You can also check out the code for this portfolio on&nbsp;<a href="https://github.com/CooperGoeke/new_portfolio" target="_blank">GitHub</a>.
             </p>
           </div>
         </div>
@@ -163,7 +176,7 @@ export default {
     background-color: $color-white;
     border: 1px solid $color-gray;
     width: 100%;
-    @include bp($bp-small) {
+    @include bp($bp-medium-small) {
       display: flex;
     }
   }
@@ -172,7 +185,7 @@ export default {
     display: none;
     position: relative;
     width: 65%;
-    @include bp($bp-small) {
+    @include bp($bp-medium-small) {
       display: block;
     }
   }
@@ -223,7 +236,7 @@ export default {
     textarea {
       max-height: 100px;
       max-width: 100%;
-      min-height: 100px;
+      min-height: 130px;
       min-width: 100%;
     }
 
@@ -300,28 +313,26 @@ export default {
     position: relative;
     text-align: center;
     width: 85%;
-    @include bp($bp-small) {
-      padding: 50px 50px 50px 10px;
-      text-align: left;
-      width: 35%;
-    }
-    @include bp($bp-large) {
+    @include bp($bp-medium-small) {
       background-image: url('../../assets/images/postcard-bg.svg');
       background-position: right bottom -20px;
       background-repeat: no-repeat;
       background-size: 100%;
+      padding: 50px 40px 50px 10px;
+      text-align: left;
+      width: 35%;
     }
 
     h2 {
       margin-bottom: 10px;
-      @include bp($bp-small) {
+      @include bp($bp-medium-small) {
         margin-bottom: 50px;
       }
     }
 
     h3 {
       margin: 5px 0 50px;
-      @include bp($bp-small) {
+      @include bp($bp-medium-small) {
         margin: 5px 0 25px;
       }
     }
@@ -333,10 +344,11 @@ export default {
     }
   }
 
-  &__github-link {
-    display: none;
-    @include bp($bp-small) {
-      display: block;
+  &__code-link {
+    margin: 0 auto 5px;
+    max-width: 240px;
+    @include bp($bp-medium-small) {
+      margin: 0 0 5px;
     }
 
     svg {

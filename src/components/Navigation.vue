@@ -7,7 +7,7 @@
       </div>
       <div class="nav__right">
         <StyledButton class="nav__link" link="/resume" text="Resume"/>
-        <StyledButton class="nav__link" link="https://www.linkedin.com/in/coopergoeke" target="_blank" text="Linkedin"/>
+        <StyledButton class="nav__link" link="https://www.linkedin.com/in/coopergoeke" target="_blank" rel="noopener noreferrer" text="Linkedin"/>
       </div>
     </div>
   </div>

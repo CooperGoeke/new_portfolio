@@ -2,7 +2,7 @@
   <div class="page__inner">
     <div class="back-button">
       <StyledButton link="/" text="Portfolio"/>
-      <StyledButton class="download_link" link="CooperGoekeResume.pdf" target="_blank" download text="Download PDF"/>
+      <StyledButton class="download_link" link="CooperGoekeResume.pdf" target="_blank" rel="noopener noreferrer" download text="Download PDF"/>
     </div>
     <section class="resume">
       <div class="resume__section resume__top">
@@ -25,22 +25,22 @@
         <div class="resume__right">
           <h4>Programming Languages</h4>
           <p>
-            Web: HTML5, CSS3/SASS, JavaScript/ES6/jQuery, PHP, MySQL.
+            Web: HTML, CSS/SASS, JavaScript, TypeScript, PHP, MySQL.
             <br>
-            Other: C++, Python, Java, Visual Basic.
+            Past Use: C++, Python, Java, Visual Basic.
           </p>
 
           <h4>Web Development</h4>
-          <p>Vue.js, Node/NPM, Webpack, Gulp, Laravel 5, Twig, MySQL, Foundation Grid, WordPress themes and plugins, responsive layouts.</p>
+          <p>Vue, React, NPM, Laravel, Twig, SQL, custom WordPress themes and plugins, responsive layouts.</p>
 
           <h4>Graphic Design</h4>
-          <p>Web and UI design, video editing, logos, icons, SVG animation.</p>
+          <p>Web and UI design, SVG animation, video editing, logos, icons.</p>
 
           <h4>Applications</h4>
           <p>
-            Adobe: Photoshop, Illustrator, InDesign, After Effects, Premiere.
+            Adobe: Photoshop, Illustrator, After Effects, Premiere, InDesign.
             <br>
-            Other: Git, Sketch 2, WordPress, Jira, VS Code.
+            Other: Git, Sketch, WordPress, Jira.
           </p>
         </div>
       </div>
@@ -52,7 +52,7 @@
         <div class="resume__right">
           <h4>Red Ventures <span>Front-End Developer</span></h4>
           <p>
-            Built and maintained web experiences for several large-brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Leveraged modern web technologies including Vue.js and SCSS to create performant transactional funnels. Mentored two junior developers to help grow the front-end team and transition developer responsibilities when needed. Personally organized numerous company-wide events because... it’s fun!<br>
+            Built and maintained web experiences for several large-brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Leveraged modern web technologies including Vue.js, React, and SCSS to create performant layouts. Mentored two junior developers to help grow the front-end team and transition developer responsibilities when needed.<br>
             <span>May 2017 - Current Role</span>
           </p>
 
