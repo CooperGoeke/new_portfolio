@@ -203,7 +203,6 @@ export default {
     }
 
     p {
-      font-style: italic;
       line-height: 1.5 !important;
       margin-bottom: 25px;
       opacity: .75;
