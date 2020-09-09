@@ -1,6 +1,6 @@
 # Cooper Goeke: Online Portfolio
 
-My newly updated Portfolio (Created Feburary, 2019. Updated September 2020)
+My newly updated portfolio (created Feburary, 2019 and updated September, 2020)
 
 This website can be found at:
 <a href="http://coopergoeke.com/">http://coopergoeke.com/</a>
