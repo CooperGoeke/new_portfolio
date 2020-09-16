@@ -23,18 +23,30 @@ export default {
   components: {
     Navigation, HomePage, AboutPage, WorkPage, ContactPage
   },
+  data () {
+    return {
+      previousScrollPosition: 0
+    }
+  },
   methods: {
     fixPages () {
       const pages = document.getElementsByClassName('page')
       let pageHeight = document.querySelector('.home').clientHeight
+      let currentScrollPosition = window.pageYOffset
+
+      // Adjust the math if the user is scrolling down the page for a smoother scroll
+      let adjustment = (currentScrollPosition > this.previousScrollPosition) ? 20 : 0
+
       for (let i = 1; i < (pages.length - 1); i++) {
-        if (window.pageYOffset >= pages[i].offsetTop) {
+        // if user is scrolled past a page, fix it
+        if (currentScrollPosition >= pages[i].offsetTop - adjustment) {
           pages[i].classList.add('fixed')
         }
-        if (window.pageYOffset <= (pages[i + 1].offsetTop - pageHeight)) {
+        if (currentScrollPosition <= (pages[i + 1].offsetTop - pageHeight - adjustment)) {
           pages[i].classList.remove('fixed')
         }
       }
+      this.previousScrollPosition = currentScrollPosition <= 0 ? 0 : currentScrollPosition
     },
     triggerAnimations () {
       let scrollItems = document.querySelectorAll('.js-reveal-on-scroll:not(.active)')
@@ -78,10 +90,82 @@ export default {
       let e = document.createEvent('Event')
       e.initEvent('scroll', true, true)
       window.dispatchEvent(e)
-
-      // Always load the home page stuff
-      document.getElementsByClassName('home__bg-image')[0].classList.add('active')
     }, 0)
   }
 }
 </script>
+
+<style lang="scss">
+@import '../assets/sass/reset';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
+
+#app {
+  * {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2 {
+    color: $color-blue-dark;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  h3, h4, h5, h6 {
+    color: $color-blue-light;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  p {
+    color: $color-blue-dark;
+    font-size: 13px;
+    line-height: 2;
+  }
+}
+
+.page {
+  box-shadow: 0 -1px 0 rgba($color-blue-dark, .2);
+  height: 600px;
+  left: 0;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  @media (min-height: 550px) {
+    height: 100vh;
+    position: absolute;
+  }
+
+  &:nth-child(2) {
+    @media (min-height: 550px) {
+      top: 100vh;
+    }
+  }
+
+  &:nth-child(3) {
+    @media (min-height: 550px) {
+      top: 200vh;
+    }
+  }
+
+  &:nth-child(4) {
+    @media (min-height: 550px) {
+      top: 300vh;
+    }
+  }
+
+  &.fixed {
+    @media (min-height: 550px) {
+      position: fixed;
+      top: 0;
+    }
+  }
+
+  &__inner {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    position: relative;
+    width: 100%;
+  }
+}
+</style>

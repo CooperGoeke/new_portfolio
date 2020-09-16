@@ -10,10 +10,16 @@
               <h3>I’m glad you’re here!</h3>
             </div>
           </div>
-          <p>My name is Cooper, and I’ve been doing web development and graphic design since 2010. I specialize as a front-end developer. I’ve got a long list of technologies and skills under my belt at this point, so I encourage you to check my resume for a full list.</p>
+          <p>
+            My name is Cooper, and I’ve been doing web development and graphic design for about 10 years.
+            While I often wear other hats, I specialize as a front-end developer and
+            you can find a full list of relevant skills on my resume.
+            I'm a curious hobbyist and a hopeless extrovert, so I encourage you to contact me if you feel&nbsp;inclined!
+          </p>
           <div class="about__button-wrap">
             <StyledButton class="about__button" link="#work" text="My Work"/>
-            <StyledButton class="about__button" link="/resume" text="Resume"/>
+            <StyledButton class="about__button about__button--resume" link="/resume" text="Resume"/>
+            <StyledButton class="about__button" link="#contact" text="Contact"/>
           </div>
         </div>
       </div>
@@ -87,7 +93,7 @@ export default {
 
   &__portrait-wrap {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     justify-content: center;
     text-align: left;
     @media (min-aspect-ratio: 3/2) {
@@ -110,11 +116,20 @@ export default {
   }
 
   &__button-wrap {
-    margin-top: 70px;
+    margin-top: 60px;
   }
 
-  &__button:first-child {
-    border-right: 0;
+  &__button {
+    &--resume {
+      display: none;
+      @include bp($bp-small) {
+        display: inline-block;
+      }
+    }
+
+    &:not(:last-child) {
+      border-right: 0;
+    }
   }
 }
 </style>

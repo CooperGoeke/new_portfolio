@@ -3,10 +3,11 @@
     <div class="home__inner page__inner">
       <div class="home__text-wrap js-reveal-on-scroll">
         <h2>Web Developer<br/><span>+</span> Designer</h2>
-        <h3>Helping to Create a Better Web</h3>
+        <h3>Working to Build a Better Web</h3>
         <StyledButton class="home__button" link="#about" text="Learn More"/>
       </div>
-      <AnimatedCity class="home__bg-image js-reveal-on-scroll"/>
+      <AnimatedCity class="home__bg-image"/>
+      <AnimatedCooper class="home__cooper"/>
     </div>
   </section>
 </template>
@@ -14,11 +15,12 @@
 <script>
 import StyledButton from '@/components/StyledButton.vue'
 import AnimatedCity from '@/components/AnimatedCity.vue'
+import AnimatedCooper from '@/components/AnimatedCooper.vue'
 
 export default {
   name: 'home',
   components: {
-    StyledButton, AnimatedCity
+    StyledButton, AnimatedCity, AnimatedCooper
   },
   computed: {
     fixedClass: function () {
@@ -46,7 +48,7 @@ export default {
       display: flex;
       justify-content: center;
       @include bp($bp-small) {
-        background: url($cloud) 5% 40% no-repeat, url($cloud) 20% 10% no-repeat, url($cloud) 30% 30% no-repeat, url($cloud) 65% 38% no-repeat, url($cloud) 80% 15% no-repeat, url($cloud) 95% 25% no-repeat;
+        background: url($cloud) 5% 40% no-repeat, url($cloud) 20% 10% no-repeat, url($cloud) 28% 30% no-repeat, url($cloud) 68% 37% no-repeat, url($cloud) 80% 15% no-repeat, url($cloud) 95% 25% no-repeat;
         background-size: 70px;
       }
     }
@@ -62,7 +64,7 @@ export default {
       width: 100%;
       z-index: 2;
       @include bp($bp-small) {
-        padding-bottom: 45vh;
+        padding-bottom: 48vh;
       }
 
       &.active {
@@ -84,24 +86,31 @@ export default {
     }
 
     &__bg-image {
-      bottom: -40px;
+      bottom: -20px;
       height: 40%;
       left: 50%;
       max-height: 600px;
-      opacity: 0;
       pointer-events: none;
       position: absolute;
       transform: translateX(-50%);
-      transition: opacity .5s linear, bottom .5s ease-out;
       width: auto;
       z-index: 1;
       @include bp($bp-small) {
         height: 60%;
       }
+    }
 
-      &.active {
-        bottom: -20px;
-        opacity: 1;
+    &__cooper {
+      height: 9%;
+      left: calc(50% - 100px);
+      max-height: 150px;
+      position: absolute;
+      top: 57%;
+      width: auto;
+      z-index: 2;
+      @include bp($bp-small) {
+        left: calc(50% - 170px);
+        top: 42%;
       }
     }
   }
