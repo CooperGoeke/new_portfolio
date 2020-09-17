@@ -29,10 +29,10 @@
         <div class="work__section js-reveal-on-scroll">
           <h3>Some other websites I worked on or made:</h3>
           <div class="work__sites-wrap">
-            <StyledButton class="work__site-button work__site-button--last" rel="nofollow noopener noreferrer" target="_blank" link="https://atlashome.com/" text="Atlas"/>
+            <StyledButton class="work__site-button" rel="nofollow noopener noreferrer" target="_blank" link="https://atlashome.com/" text="Atlas"/>
             <StyledButton class="work__site-button" rel="nofollow noopener noreferrer" target="_blank" link="http://fiduciaryinsurancegroup.com/" text="Insurance Group"/>
             <StyledButton class="work__site-button work__site-button--last" rel="nofollow noopener noreferrer" target="_blank" link="http://www.cincyrowing.org/" text="UC Rowing"/>
-            <StyledButton class="work__site-button" rel="nofollow noopener noreferrer" target="_blank" link="http://old.coopergoeke.com/" text="Old Portfolio"/>
+            <StyledButton class="work__site-button work__site-button--last" rel="nofollow noopener noreferrer" target="_blank" link="http://old.coopergoeke.com/" text="Old Portfolio"/>
           </div>
         </div>
       </div>
@@ -114,21 +114,21 @@ export default {
   &__brands-wrap {
     align-items: center;
     justify-content: center;
-    @include bp($bp-small) {
+    @include bp($bp-medium-small) {
       display: flex;
     }
 
     img {
       margin: 0 50px 30px;
       width: 110px;
-      @include bp($bp-small) {
+      @include bp($bp-medium-small) {
         margin: 0 50px;
         width: 130px;
       }
 
       &:nth-child(2) {
         display: none;
-        @include bp($bp-small) {
+        @include bp($bp-medium-small) {
           display: block;
         }
       }
@@ -152,15 +152,14 @@ export default {
     }
 
     &:not(:last-child) {
-      @include bp($bp-small) {
+      @include bp($bp-medium) {
         border-right: none;
       }
     }
 
-    &:nth-child(3) {
-      margin: 30px auto 0;
-      @include bp($bp-small) {
-        margin: 30px auto;
+    &:nth-child(2) {
+      @include bp($bp-small, $bp-medium) {
+        border-left: none;
       }
     }
 

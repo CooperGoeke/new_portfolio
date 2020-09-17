@@ -45,19 +45,19 @@ export default {
 
   &__inner {
     align-items: center;
-    background-image: url('../../assets/images/skill-tiles.svg');
-    background-position: left -80% bottom -110px;
+    background-image: url('../../assets/images/skill-tiles.jpg');
+    background-position: left -140% bottom -120px;
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 92%;
     display: flex;
     justify-content: center;
     @media (max-aspect-ratio: 1/2) {
       background-position: left -120px bottom -90px;
-      background-size: 120%;
+      background-size: 119%;
     }
     @media (min-aspect-ratio: 2/2) {
       background-position: left -120px bottom -100px;
-      background-size: 55%;
+      background-size: 54%;
     }
   }
 

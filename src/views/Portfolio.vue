@@ -23,31 +23,7 @@ export default {
   components: {
     Navigation, HomePage, AboutPage, WorkPage, ContactPage
   },
-  data () {
-    return {
-      previousScrollPosition: 0
-    }
-  },
   methods: {
-    fixPages () {
-      const pages = document.getElementsByClassName('page')
-      let pageHeight = document.querySelector('.home').clientHeight
-      let currentScrollPosition = window.pageYOffset
-
-      // Adjust the math if the user is scrolling down the page for a smoother scroll
-      let adjustment = (currentScrollPosition > this.previousScrollPosition) ? 20 : 0
-
-      for (let i = 1; i < (pages.length - 1); i++) {
-        // if user is scrolled past a page, fix it
-        if (currentScrollPosition >= pages[i].offsetTop - adjustment) {
-          pages[i].classList.add('fixed')
-        }
-        if (currentScrollPosition <= (pages[i + 1].offsetTop - pageHeight - adjustment)) {
-          pages[i].classList.remove('fixed')
-        }
-      }
-      this.previousScrollPosition = currentScrollPosition <= 0 ? 0 : currentScrollPosition
-    },
     triggerAnimations () {
       let scrollItems = document.querySelectorAll('.js-reveal-on-scroll:not(.active)')
       if (scrollItems) {
@@ -60,18 +36,9 @@ export default {
       }
     }
   },
-  computed: {
-    isDesktop: function () {
-      // Check if this is not a mobile device
-      return !(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))
-    }
-  },
   created () {
     // Scroll
     window.addEventListener('scroll', throttle(() => {
-      if (this.isDesktop) {
-        this.fixPages()
-      }
       this.triggerAnimations()
     }, 30))
 
@@ -96,9 +63,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/sass/reset';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,800');
-
 #app {
   * {
     font-family: 'Montserrat', sans-serif;
@@ -124,40 +88,12 @@ export default {
 }
 
 .page {
-  box-shadow: 0 -1px 0 rgba($color-blue-dark, .2);
+  border-top: 1px solid rgba($color-blue-dark, .2);
   height: 600px;
-  left: 0;
   overflow: hidden;
-  top: 0;
   width: 100%;
   @media (min-height: 550px) {
     height: 100vh;
-    position: absolute;
-  }
-
-  &:nth-child(2) {
-    @media (min-height: 550px) {
-      top: 100vh;
-    }
-  }
-
-  &:nth-child(3) {
-    @media (min-height: 550px) {
-      top: 200vh;
-    }
-  }
-
-  &:nth-child(4) {
-    @media (min-height: 550px) {
-      top: 300vh;
-    }
-  }
-
-  &.fixed {
-    @media (min-height: 550px) {
-      position: fixed;
-      top: 0;
-    }
   }
 
   &__inner {

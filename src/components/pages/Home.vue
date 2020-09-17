@@ -1,13 +1,13 @@
 <template>
-  <section id="home" class="page home" :class="fixedClass">
+  <section id="home" class="page home">
     <div class="home__inner page__inner">
       <div class="home__text-wrap js-reveal-on-scroll">
         <h2>Web Developer<br/><span>+</span> Designer</h2>
         <h3>Working to Build a Better Web</h3>
         <StyledButton class="home__button" link="#about" text="Learn More"/>
       </div>
-      <AnimatedCity class="home__bg-image"/>
-      <AnimatedCooper class="home__cooper"/>
+      <AnimatedCity class="home__bg-image" :shouldAnimate="isDesktop" />
+      <AnimatedCooper class="home__cooper" :shouldAnimate="isDesktop" />
     </div>
   </section>
 </template>
@@ -20,15 +20,12 @@ import AnimatedCooper from '@/components/AnimatedCooper.vue'
 export default {
   name: 'home',
   components: {
-    StyledButton, AnimatedCity, AnimatedCooper
+    StyledButton, AnimatedCooper, AnimatedCity
   },
   computed: {
-    fixedClass: function () {
-      if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i)) {
-        return ''
-      } else {
-        return ' fixed'
-      }
+    isDesktop: function () {
+      // Check if this is not a mobile device
+      return !(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))
     }
   }
 }

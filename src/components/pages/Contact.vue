@@ -318,7 +318,7 @@ export default {
     text-align: center;
     width: 85%;
     @include bp($bp-medium-small) {
-      background-image: url('../../assets/images/postcard-bg.svg');
+      background-image: url('../../assets/images/postcard-bg.jpg');
       background-position: right bottom -20px;
       background-repeat: no-repeat;
       background-size: 100%;

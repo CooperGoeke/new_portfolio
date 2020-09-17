@@ -55,27 +55,36 @@ import { gsap } from 'gsap'
 
 export default {
   name: 'animated-cooper',
+  props: {
+    shouldAnimate: {
+      default: true,
+      required: false,
+      type: Boolean
+    }
+  },
   data () {
     return {
       angleCount: 0
     }
   },
   mounted () {
-    gsap.set(this.$refs.spinner, { transformOrigin: 'center' })
-    gsap.set(this.$refs.arm, { transformOrigin: '2 2' })
-    setInterval(() => {
-      this.angleCount += 0.25
+    if (this.shouldAnimate) {
+      gsap.set(this.$refs.spinner, { transformOrigin: 'center' })
+      gsap.set(this.$refs.arm, { transformOrigin: '2 2' })
+      setInterval(() => {
+        this.angleCount += 0.25
 
-      // Move the whole person up and down
-      gsap.set(this.$refs.cooper, { translateY: Math.sin(this.angleCount / 10) * 8 })
+        // Move the whole person up and down
+        gsap.set(this.$refs.cooper, { translateY: Math.sin(this.angleCount / 10) * 8 })
 
-      // Move the arm with the wrench
-      gsap.set(this.$refs.arm, { rotate: Math.sin(this.angleCount / 10 - 1.5) * 8 })
+        // Move the arm with the wrench
+        gsap.set(this.$refs.arm, { rotate: Math.sin(this.angleCount / 10 - 1.5) * 8 })
 
-      // Spin the spinner on the hat
-      gsap.set(this.$refs.spinner, { scaleX: Math.cos(this.angleCount) * 1.2 })
-      gsap.set(this.$refs.spinner, { scaleY: Math.sin(this.angleCount) * 1.2 })
-    }, 20)
+        // Spin the spinner on the hat
+        gsap.set(this.$refs.spinner, { scaleX: Math.cos(this.angleCount) * 1.2 })
+        gsap.set(this.$refs.spinner, { scaleY: Math.sin(this.angleCount) * 1.2 })
+      }, 20)
+    }
   }
 }
 </script>
