@@ -244,7 +244,7 @@ export default {
       gsap.to(this.$refs.flamebase, { duration: 0.6, opacity: '0.4', repeat: -1, yoyo: true })
       gsap.to(this.$refs.watershine, { duration: 0.4, opacity: '0', repeat: -1, yoyo: true })
       gsap.to(this.$refs.flag, { duration: 0.4, scaleX: '1.2', repeat: -1, yoyo: true })
-      gsap.to(this.$refs.steam, { duration: 3, opacity: '0.4', scaleY: '0.8', repeat: -1, yoyo: true, transformOrigin: 'bottom' })
+      gsap.to(this.$refs.steam, { duration: 2.5, opacity: '0.5', scaleY: '0.7', repeat: -1, yoyo: true, transformOrigin: 'bottom' })
       gsap.to(this.$refs.ring1, { delay: 0, duration: 1.2, opacity: '0.1', scale: '2.6', repeat: -1, transformOrigin: 'center', ease: 'none' })
       gsap.to(this.$refs.ring2, { delay: 0.4, duration: 1.2, opacity: '0.1', scale: '2.6', repeat: -1, transformOrigin: 'center', ease: 'none' })
       gsap.to(this.$refs.ring3, { delay: 0.8, duration: 1.2, opacity: '0.1', scale: '2.6', repeat: -1, transformOrigin: 'center', ease: 'none' })

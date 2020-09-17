@@ -81,8 +81,8 @@ export default {
         gsap.set(this.$refs.arm, { rotate: Math.sin(this.angleCount / 10 - 1.5) * 8 })
 
         // Spin the spinner on the hat
-        gsap.set(this.$refs.spinner, { scaleX: Math.cos(this.angleCount) * 1.2 })
-        gsap.set(this.$refs.spinner, { scaleY: Math.sin(this.angleCount) * 1.2 })
+        gsap.set(this.$refs.spinner, { scaleX: Math.cos(this.angleCount) * 1.1 })
+        gsap.set(this.$refs.spinner, { scaleY: Math.sin(this.angleCount) * 1.1 })
       }, 20)
     }
   }

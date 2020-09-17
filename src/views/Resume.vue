@@ -31,16 +31,16 @@
           </p>
 
           <h4>Web Development</h4>
-          <p>Vue, React, NPM, Laravel, Twig, SQL, custom WordPress themes and plugins, responsive layouts.</p>
+          <p>Vue, React, Git, NPM, SQL, Laravel, custom WordPress themes and plugins, responsive layouts, Twig.</p>
 
           <h4>Graphic Design</h4>
           <p>Web and UI design, SVG animation, video editing, logos, icons.</p>
 
           <h4>Applications</h4>
           <p>
-            Adobe: Photoshop, Illustrator, After Effects, Premiere, InDesign.
+            Adobe: Photoshop, Illustrator, After Effects, InDesign.
             <br>
-            Other: Git, Sketch, WordPress, Jira.
+            Other: Postman, Sketch, WordPress, Terminal, BrowserStack, Lighthouse.
           </p>
         </div>
       </div>
@@ -52,7 +52,7 @@
         <div class="resume__right">
           <h4>Red Ventures <span>Front-End Developer</span></h4>
           <p>
-            Built and maintained web experiences for several large-brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Leveraged modern web technologies including Vue.js, React, and SCSS to create performant layouts. Mentored two junior developers to help grow the front-end team and transition developer responsibilities when needed.<br>
+            Built and maintained web experiences for several large-brand websites including American Express, Bankrate, The Simple Dollar, and Frontier. Leveraged modern web technologies including Vue.js, React, and SCSS to create performant layouts. Worked alongside graphic designers and business analysts throughout the whole process. Mentored two junior developers to help grow the front-end team and transition developer responsibilities when needed.<br>
             <span>May 2017 - Current Role</span>
           </p>
 
@@ -76,7 +76,7 @@
         </div>
         <div class="resume__right">
           <h4>University of Cincinnati</h4>
-          <p>BS: Computer Science <br>Honors, Swimming</p>
+          <p>BS: Computer Science</p>
         </div>
       </div>
     </section>
