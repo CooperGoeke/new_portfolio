@@ -1,7 +1,7 @@
 <template>
   <section id="home" class="page home">
     <div class="home__inner page__inner">
-      <div class="home__text-wrap js-reveal-on-scroll">
+      <div class="home__text-wrap">
         <h2>Web Developer<br/><span>+</span> Designer</h2>
         <h3>Working to Build a Better Web</h3>
         <StyledButton class="home__button" link="#about" text="Learn More"/>
@@ -52,21 +52,14 @@ export default {
 
     &__text-wrap {
       max-width: 600px;
-      opacity: 0;
       padding-bottom: 25vh;
       position: relative;
       text-align: center;
-      top: -30px;
       transition: opacity .5s linear, top .5s ease-out;
       width: 100%;
       z-index: 2;
       @include bp($bp-small) {
         padding-bottom: 48vh;
-      }
-
-      &.active {
-        opacity: 1;
-        top: 0;
       }
     }
 

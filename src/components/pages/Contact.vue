@@ -51,11 +51,11 @@
             </p>
             <p class="contact__link contact__link--twitter">
               <svg viewBox="0 0 33.7 33.3"><circle cx="16.9" cy="17" r="16.3" fill-rule="evenodd" clip-rule="evenodd" fill="#324c78"/><path d="M13.3 22.7c-1.1-.1-2-.4-2.7-1.1-.5-.5-.9-1-1.1-1.7.6.1 1.2.1 1.8-.1-2-.6-3.1-1.9-3.2-4.1.6.3 1.2.5 1.8.5-1.8-1.5-2.2-3.3-1.2-5.5 2.2 2.6 5.1 4.1 8.5 4.3 0-.2-.1-.5-.1-.7-.1-1.9 1-3.5 2.8-4.1 1.5-.5 2.9-.2 4.1.9.2.1.3.2.5.1.4-.1.8-.2 1.2-.4.4-.1.7-.3 1.1-.5-.3.9-.9 1.6-1.7 2.2.2 0 .5-.1.7-.1.3-.1.5-.1.8-.2.2-.1.5-.2.7-.3-.5.7-1 1.3-1.6 1.8-.3.2-.4.4-.4.8-.1 4.3-1.9 7.7-5.6 10.1-1.3.9-2.8 1.3-4.4 1.5-1.7.2-3.3.1-5-.4-1-.3-2-.7-2.9-1.3 1.1.1 2.1 0 3.1-.3 1-.2 1.9-.7 2.8-1.4z" fill="#fff"/></svg>
-              Connect with me on&nbsp;<a href="https://twitter.com/CooperGoeke" target="_blank">Twitter</a>.
+              Connect with me on&nbsp;<a href="https://twitter.com/CooperGoeke" target="_blank" rel="noopener noreferrer">Twitter</a>.
             </p>
             <p class="contact__link">
               <svg viewBox="0 0 33.74 33.29"><path d="M16.87.76C7.88.76.58 8.05.58 17.05c0 7.2 4.67 13.3 11.14 15.46.81.15 1.11-.35 1.11-.79 0-.39-.01-1.41-.02-2.77-4.53.98-5.49-2.18-5.49-2.18-.74-1.88-1.81-2.38-1.81-2.38-1.48-1.01.11-.99.11-.99 1.63.12 2.5 1.68 2.5 1.68 1.45 2.49 3.81 1.77 4.74 1.35.15-1.05.57-1.77 1.03-2.18-3.62-.41-7.42-1.81-7.42-8.05 0-1.78.63-3.23 1.68-4.37-.17-.41-.73-2.07.16-4.31 0 0 1.37-.44 4.48 1.67 1.3-.36 2.69-.54 4.08-.55 1.38.01 2.78.19 4.08.55 3.11-2.11 4.48-1.67 4.48-1.67.89 2.24.33 3.9.16 4.31 1.04 1.14 1.67 2.59 1.67 4.37 0 6.26-3.81 7.63-7.44 8.04.58.5 1.11 1.5 1.11 3.02 0 2.18-.02 3.93-.02 4.47 0 .44.29.94 1.12.78 6.47-2.16 11.13-8.26 11.13-15.45 0-9.01-7.3-16.3-16.29-16.3z" fill-rule="evenodd" clip-rule="evenodd" fill="#324c78"/></svg>
-              You can also check out the code for this portfolio on&nbsp;<a href="https://github.com/CooperGoeke/new_portfolio" target="_blank">GitHub</a>.
+              You can also check out the code for this portfolio on&nbsp;<a href="https://github.com/CooperGoeke/new_portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>.
             </p>
           </div>
         </div>
