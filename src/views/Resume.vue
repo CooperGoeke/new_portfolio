@@ -25,22 +25,22 @@
         <div class="resume__right">
           <h4>Programming Languages</h4>
           <p>
-            Web: HTML, CSS/SASS, JavaScript, TypeScript, PHP, MySQL.
+            Web: HTML, CSS/SASS, JavaScript, TypeScript, PHP, GraphQL.
             <br>
             Past Use: C++, Python, Java, Visual Basic.
           </p>
 
           <h4>Web Development</h4>
-          <p>Vue, React, Git, NPM, SQL, Laravel, custom WordPress themes and plugins, responsive layouts, Twig.</p>
+          <p>React, Vue, Git, NPM, SQL, Laravel, custom WordPress themes and plugins, responsive layouts.</p>
 
           <h4>Graphic Design</h4>
           <p>Web and UI design, SVG animation, video editing, logos, icons.</p>
 
           <h4>Applications</h4>
           <p>
-            Adobe: Photoshop, Illustrator, After Effects, InDesign.
+            Adobe: Photoshop, Illustrator, After Effects.
             <br>
-            Other: Postman, Sketch, WordPress, Terminal, BrowserStack, Lighthouse.
+            Other: Figma, Postman, Sketch, BrowserStack, VS Code.
           </p>
         </div>
       </div>

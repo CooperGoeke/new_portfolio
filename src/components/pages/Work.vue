@@ -31,8 +31,6 @@
           <div class="work__sites-wrap">
             <StyledButton class="work__site-button" rel="nofollow noopener noreferrer" target="_blank" link="https://atlashome.com/" text="Atlas"/>
             <StyledButton class="work__site-button" rel="nofollow noopener noreferrer" target="_blank" link="http://fiduciaryinsurancegroup.com/" text="Insurance Group"/>
-            <StyledButton class="work__site-button work__site-button--last" rel="nofollow noopener noreferrer" target="_blank" link="http://www.cincyrowing.org/" text="UC Rowing"/>
-            <StyledButton class="work__site-button work__site-button--last" rel="nofollow noopener noreferrer" target="_blank" link="http://old.coopergoeke.com/" text="Old Portfolio"/>
           </div>
         </div>
       </div>
