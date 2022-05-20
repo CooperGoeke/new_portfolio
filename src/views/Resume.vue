@@ -27,11 +27,11 @@
           <p>
             Web: HTML, CSS/SASS, JavaScript, TypeScript, PHP, GraphQL.
             <br>
-            Past Use: C++, Python, Java, Visual Basic.
+            Past Use: SQL, C++, Python, Java, Visual Basic.
           </p>
 
           <h4>Web Development</h4>
-          <p>React, Vue, Git, NPM, SQL, Laravel, custom WordPress themes and plugins, responsive layouts.</p>
+          <p>React, Vue, Git, NPM, Laravel, custom WordPress themes and plugins, responsive layouts.</p>
 
           <h4>Graphic Design</h4>
           <p>Web and UI design, SVG animation, video editing, logos, icons.</p>
