@@ -31,7 +31,7 @@
           </p>
 
           <h4>Web Development</h4>
-          <p>React, Vue, Git, NPM, Laravel, custom WordPress themes and plugins, responsive layouts.</p>
+          <p>React, Vue, Git, NPM, Laravel, custom WordPress themes and plugins, responsive&nbsp;layouts.</p>
 
           <h4>Graphic Design</h4>
           <p>Web and UI design, SVG animation, video editing, logos, icons.</p>
